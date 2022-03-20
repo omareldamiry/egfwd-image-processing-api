@@ -6,8 +6,8 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const imgDir = process.env.IMG_DIR || '';         // Images Directory
-const outDir = process.env.OUT_DIR || '';         // Output Directory
+const imgDir = process.env.IMG_DIR || ''; // Images Directory
+const outDir = process.env.OUT_DIR || ''; // Output Directory
 
 export async function getImage(inputImagePath: string): Promise<Buffer | null> {
   // Checks if file exists

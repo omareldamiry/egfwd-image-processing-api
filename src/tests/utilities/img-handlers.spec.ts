@@ -26,7 +26,7 @@ describe('Image handling utilities', () => {
     });
 
     it('returns null from an invalid path', async () => {
-      const imageBuffer = await getImage('/invalid/' + imagePath);  //Invalid Image path
+      const imageBuffer = await getImage('/invalid/' + imagePath); //Invalid Image path
       expect(imageBuffer).toBeNull();
     });
   });
