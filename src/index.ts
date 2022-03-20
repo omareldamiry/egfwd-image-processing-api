@@ -1,8 +1,11 @@
 import express from 'express';
+import routes from './routes/index';
 
 const app = express();
 const port = 5000;
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+app.use('/api', routes);
+
+app.listen(port);
+
+export default app;
