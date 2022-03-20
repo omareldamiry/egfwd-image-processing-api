@@ -20,6 +20,7 @@ describe('Server api/image endpoint', () => {
   });
 
   it('returns 404 when image does not exist', async () => {
+    // Invalid filename
     const response = await request.get('/api/image?filename=fjor');
     expect(response.status).toBe(404);
   });
