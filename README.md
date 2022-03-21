@@ -6,6 +6,7 @@ This project was developed for the purpose of fulfilling the requirements of the
 
 ## Features
 
+- Run the image resizing service through `localhost:5000/api/image`.
 - Choose out of a selection of images using the `?filename=value` URL query.
 - Set the size of the image using the `?width=value&height=value` URL queries.
 
