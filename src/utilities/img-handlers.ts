@@ -28,7 +28,8 @@ export async function getImage(inputImagePath: string): Promise<Buffer | null> {
 export async function resizeImg(imgOptions: ImageOptions): Promise<string | null> {
   // Input and output image files
   const inputImage = path.resolve(__dirname, imgDir, `${imgOptions.filename}.jpg`);
-  const outputImage = path.resolve(__dirname,
+  const outputImage = path.resolve(
+    __dirname,
     outDir,
     `${imgOptions.filename}_${imgOptions.width || 'unset'}_${imgOptions.height || 'unset'}.jpg`
   );
