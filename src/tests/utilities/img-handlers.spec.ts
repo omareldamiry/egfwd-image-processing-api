@@ -17,8 +17,8 @@ describe('Image handling utilities', () => {
 
   describe('Image reading utility', () => {
     // Valid image path
-    const imagePath = path.join(imgDir, `${imgOptions.filename}.jpg`);
-
+    const imagePath = path.resolve(__dirname, '..', imgDir, `${imgOptions.filename}.jpg`);
+    console.log(imagePath);
     it('returns a buffer from a valid path', async () => {
       // getImage() function returns an image as Buffer if found, otherwise null.
       const imageBuffer = await getImage(imagePath);

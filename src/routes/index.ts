@@ -4,7 +4,7 @@ import resizeImg from '../utilities/img-handlers';
 
 const routes = express.Router();
 
-routes.get('/image', async (req, res) => {
+routes.get('/image', async (req: express.Request, res: express.Response): Promise<void> => {
   // Saving URL query parameters in ImageOptions
   const imageOptions: ImageOptions = {
     filename: req.query.filename?.toString(),
