@@ -3,6 +3,7 @@ import path from 'path';
 import sharp from 'sharp';
 import ImageOptions from '../models/image-options';
 import * as dotenv from 'dotenv';
+import createOutDir from './dir_handlers';
 
 dotenv.config();
 
@@ -33,6 +34,8 @@ export async function resizeImg(imgOptions: ImageOptions): Promise<string | null
     outDir,
     `${imgOptions.filename}_${imgOptions.width || 'unset'}_${imgOptions.height || 'unset'}.jpg`
   );
+
+  await createOutDir(path.resolve(__dirname, outDir));
 
   if (!existsSync(outputImage)) {
     // Returns an image as Buffer or null if not found
